@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+DISTRO_REPO=https://github.com/alaturka/linux
+DISTRO_PATH=.local/mnt
+
+main() {
+	if ! command -v lets &>/dev/null; then
+		[[ -d $DISTRO_PATH ]] || git clone "$DISTRO_REPO" "$DISTRO_PATH"
+
+		export PATH="$DISTRO_PATH"/bin:"$DISTRO_PATH"/opt/self/usr/bin:"$PATH"
+	fi
+
+	exec "$@"
+}
+
+main "$@"
