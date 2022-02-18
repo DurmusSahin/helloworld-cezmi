@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Valid?",
+      "setup": "",
+      "run": ".local/bin/exec lets okay",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "Good?",
+      "setup": "",
+      "run": ".local/bin/exec lets lint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 30
+    },
+    {
+      "name": "Correct?",
+      "setup": "",
+      "run": ".local/bin/exec lets play",
+      "input": "",
+      "output": "Hello, World!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 50
+    }
+  ]
+}
